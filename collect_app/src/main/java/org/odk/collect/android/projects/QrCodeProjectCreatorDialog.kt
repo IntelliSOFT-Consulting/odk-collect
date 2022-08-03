@@ -17,6 +17,7 @@ import com.journeyapps.barcodescanner.CaptureManager
 import org.odk.collect.analytics.Analytics
 import org.odk.collect.android.R
 import org.odk.collect.android.activities.ActivityUtils
+import org.odk.collect.android.activities.LandingActivity
 import org.odk.collect.android.activities.MainMenuActivity
 import org.odk.collect.android.analytics.AnalyticsEvents
 import org.odk.collect.android.configure.qr.QRCodeDecoder
@@ -274,7 +275,7 @@ class QrCodeProjectCreatorDialog :
         if (projectCreatedSuccessfully) {
             Analytics.log(AnalyticsEvents.QR_CREATE_PROJECT)
 
-            ActivityUtils.startActivityAndCloseAllOthers(activity, MainMenuActivity::class.java)
+            ActivityUtils.startActivityAndCloseAllOthers(activity, LandingActivity::class.java)
             ToastUtils.showLongToast(
                 requireContext(),
                 getString(
@@ -289,7 +290,7 @@ class QrCodeProjectCreatorDialog :
 
     override fun switchToProject(uuid: String) {
         currentProjectProvider.setCurrentProject(uuid)
-        ActivityUtils.startActivityAndCloseAllOthers(activity, MainMenuActivity::class.java)
+        ActivityUtils.startActivityAndCloseAllOthers(activity, LandingActivity::class.java)
         ToastUtils.showLongToast(
             requireContext(),
             getString(

@@ -35,7 +35,7 @@ class FirstLaunchActivity : CollectAbstractActivity() {
         DaggerUtils.getComponent(this).inject(this)
 
         if (projectsRepository.getAll().isNotEmpty()) {
-            ActivityUtils.startActivityAndCloseAllOthers(this, MainMenuActivity::class.java)
+            ActivityUtils.startActivityAndCloseAllOthers(this, LandingActivity::class.java)
             return
         }
 
@@ -68,7 +68,7 @@ class FirstLaunchActivity : CollectAbstractActivity() {
                 projectsRepository.save(Project.DEMO_PROJECT)
                 currentProjectProvider.setCurrentProject(Project.DEMO_PROJECT_ID)
 
-                ActivityUtils.startActivityAndCloseAllOthers(this@FirstLaunchActivity, MainMenuActivity::class.java)
+                ActivityUtils.startActivityAndCloseAllOthers(this@FirstLaunchActivity, LandingActivity::class.java)
             }
         }
     }
