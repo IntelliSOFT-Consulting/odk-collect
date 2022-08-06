@@ -118,7 +118,7 @@
             android:name=".activities.FormEntryActivity"
             android:exported="true"
             android:targetActivity=".activities.FormEntryActivity"
-            tools:ignore="AppLinkUrlError"></activity-alias>
+            tools:ignore="AppLinkUrlError"/>
 
         <activity
             android:name=".draw.DrawActivity"
