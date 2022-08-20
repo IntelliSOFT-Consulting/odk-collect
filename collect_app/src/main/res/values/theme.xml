@@ -52,8 +52,10 @@
         <!--/Material3 attributes-->
 
         <!-- Needed to customize the status bar color -->
-        <item name="android:statusBarColor">?colorSurface</item>
+        <item name="android:statusBarColor">?colorPrimary</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">@bool/lightStatusBar</item>
+
+        <!--Update toolbar-->
 
         <!-- Used as divider in many places. Not sure why. -->
         <item name="dividerCompat">@android:drawable/divider_horizontal_bright</item>
@@ -72,9 +74,12 @@
         <item name="android:alertDialogTheme">@style/Theme.Collect.Dialog.Alert</item>
     </style>
 
-    <style name="Theme.Collect.SplashScreen" parent="Theme.SplashScreen">
+    <style name="Theme.Collect.NoActionBar" parent="Theme.Collect">
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="Theme.Collect.SplashScreen" parent="Theme.Collect">
         <item name="windowSplashScreenBackground">@color/colorSurface</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/notes</item>
         <item name="postSplashScreenTheme">@style/Theme.Collect</item>
     </style>
 

@@ -6,6 +6,8 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.window.SplashScreen;
 
 import org.odk.collect.android.R;
 import org.odk.collect.android.databinding.ActivityLandingBinding;
@@ -18,16 +20,22 @@ public class LandingActivity extends CollectAbstractActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityLandingBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        CountDownTimer timer = new CountDownTimer(5000, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                //  binding.textView.setText("" + millisUntilFinished / 1000);
+            }
 
-        initToolbar();
-        binding.btnProceed.setText(getString(R.string.proceed));
-        binding.btnProceed.setOnClickListener(v -> {
-            startActivity(new Intent(LandingActivity.this, MainMenuActivity.class));
-        });
+            @Override
+            public void onFinish() {
+                Intent intent = new Intent(LandingActivity.this, FirstLaunchActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+        timer.start();
+
     }
 
-    private void initToolbar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-    }
+
 }

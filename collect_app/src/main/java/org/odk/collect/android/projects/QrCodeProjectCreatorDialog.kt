@@ -275,7 +275,7 @@ class QrCodeProjectCreatorDialog :
         if (projectCreatedSuccessfully) {
             Analytics.log(AnalyticsEvents.QR_CREATE_PROJECT)
 
-            ActivityUtils.startActivityAndCloseAllOthers(activity, LandingActivity::class.java)
+            ActivityUtils.startActivityAndCloseAllOthers(activity, MainMenuActivity::class.java)
             ToastUtils.showLongToast(
                 requireContext(),
                 getString(
@@ -290,7 +290,7 @@ class QrCodeProjectCreatorDialog :
 
     override fun switchToProject(uuid: String) {
         currentProjectProvider.setCurrentProject(uuid)
-        ActivityUtils.startActivityAndCloseAllOthers(activity, LandingActivity::class.java)
+        ActivityUtils.startActivityAndCloseAllOthers(activity, MainMenuActivity::class.java)
         ToastUtils.showLongToast(
             requireContext(),
             getString(

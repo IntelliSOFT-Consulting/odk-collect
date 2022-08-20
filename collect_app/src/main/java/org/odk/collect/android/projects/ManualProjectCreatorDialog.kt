@@ -209,7 +209,7 @@ class ManualProjectCreatorDialog :
 
     override fun createProject(settingsJson: String) {
         projectCreator.createNewProject(settingsJson)
-        ActivityUtils.startActivityAndCloseAllOthers(activity, LandingActivity::class.java)
+        ActivityUtils.startActivityAndCloseAllOthers(activity, MainMenuActivity::class.java)
         ToastUtils.showLongToast(
             requireContext(),
             getString(R.string.switched_project, currentProjectProvider.getCurrentProject().name)
@@ -218,7 +218,7 @@ class ManualProjectCreatorDialog :
 
     override fun switchToProject(uuid: String) {
         currentProjectProvider.setCurrentProject(uuid)
-        ActivityUtils.startActivityAndCloseAllOthers(activity, LandingActivity::class.java)
+        ActivityUtils.startActivityAndCloseAllOthers(activity, MainMenuActivity::class.java)
         ToastUtils.showLongToast(
             requireContext(),
             getString(

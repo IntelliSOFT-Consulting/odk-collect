@@ -1,4 +1,7 @@
 <resources>
-    <string name="enter_data_landing">Proceed</string>
-    <string name="proceed">Proceed</string>
+    <string name="enter_data_landing" translatable="false">Proceed</string>
+    <string name="proceed" translatable="false">Proceed</string>
+    <string name="collect_app_title" translatable="false">Welcome to\nPMI Kinga Malaria supervision</string>
+    <string name="welcome" translatable="false">If you are using the application for the first time, click on ‘About the supervision application’ otherwise, proceed to fill the checklists as you conduct the actual supervision.</string>
+    <string name="welcome_tagline" translatable="false">Welcome to PMI Kinga Malaria application on Open Data Kit (ODK) for your supervision, Data Collection Verification (DCV) and submission of Performance Monitoring Tracking (PMT). PMT will be filled and submitted only by site coordinators, while the other forms will be filled and submitted by all other supervisors including site coordinators.\n\nTo learn more about the application, kindly select each specific form name for more details in the next pages. If you are already familiar with the forms, kindly proceed to the specific checklists.</string>
 </resources>

@@ -70,8 +70,9 @@
     <application
         android:name=".application.Collect"
         android:allowBackup="true"
-        android:icon="@drawable/notes"
+        android:icon="@mipmap/notes"
         android:installLocation="auto"
+        android:roundIcon="@mipmap/notes"
         android:label="@string/collect_app_name"
         android:largeHeap="true"
         android:networkSecurityConfig="@xml/network_security_config"
@@ -80,7 +81,15 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".activities.LandingActivity"
-            android:exported="false" />
+            android:theme="@style/Theme.Collect"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -96,12 +105,12 @@
             android:name=".activities.FirstLaunchActivity"
             android:exported="true"
             android:theme="@style/Theme.Collect.SplashScreen">
-            <intent-filter>
+          <!--  <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".activities.MainMenuActivity" />
         <activity
