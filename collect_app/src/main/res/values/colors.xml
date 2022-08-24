@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3e9fcc</color>
-    <color name="colorPrimaryVariant">#00719b</color>
+    <color name="colorPrimary">#17327E</color>
+    <color name="colorPrimaryVariant">#17327E</color>
     <color name="colorOnPrimary">#ffffff</color>
 
     <color name="colorError">#D42C2C</color>
@@ -10,7 +10,7 @@
     <color name="colorSurface">#FFFFFF</color>
     <color name="colorOnSurface">#000000</color>
 
-    <bool name="lightStatusBar">true</bool>
+    <bool name="lightStatusBar">false</bool>
 
     <!-- This color is used for buttons that should have a similar color to colorSurface (but still
     stand out from the background).

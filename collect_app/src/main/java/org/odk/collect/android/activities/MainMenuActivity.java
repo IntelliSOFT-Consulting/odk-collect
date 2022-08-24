@@ -261,6 +261,8 @@ public class MainMenuActivity extends CollectAbstractActivity {
 
     private void initToolbar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+        toolbar.setTitleTextColor(getResources().getColor(R.color.colorOnPrimary));
         setSupportActionBar(toolbar);
     }
 

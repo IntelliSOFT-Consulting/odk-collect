@@ -1,6 +1,7 @@
 package org.odk.collect.android.activities
 
 import android.os.Bundle
+import android.view.View
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import org.odk.collect.analytics.Analytics
 import org.odk.collect.android.R
@@ -56,11 +57,12 @@ class FirstLaunchActivity : CollectAbstractActivity() {
                 )
             }
 
-            appName.text = String.format(
-                "%s %s",
-                getString(R.string.collect_app_name),
-                versionInformation.versionToDisplay
-            )
+//            appName.text = String.format(
+//                "%s %s",
+//                getString(R.string.collect_app_name),
+//                versionInformation.versionToDisplay
+//            )
+
 
             configureLater.addOnClickListener {
                 Analytics.log(AnalyticsEvents.TRY_DEMO)
@@ -68,7 +70,10 @@ class FirstLaunchActivity : CollectAbstractActivity() {
                 projectsRepository.save(Project.DEMO_PROJECT)
                 currentProjectProvider.setCurrentProject(Project.DEMO_PROJECT_ID)
 
-                ActivityUtils.startActivityAndCloseAllOthers(this@FirstLaunchActivity, MainMenuActivity::class.java)
+                ActivityUtils.startActivityAndCloseAllOthers(
+                    this@FirstLaunchActivity,
+                    MainMenuActivity::class.java
+                )
             }
         }
     }
